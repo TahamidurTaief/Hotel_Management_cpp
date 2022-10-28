@@ -369,6 +369,8 @@ start:
         cout << "\t" << Qdrinks << "\t\t   " << Sdrinks << "\t\t\t  " << Qdrinks - Sdrinks << " \t\t  " << Total_drinks << "\t\t  " << Total_rooms + Total_bread + Total_pasta + Total_burger + Total_noodles + Total_shake + Total_juice + Total_drinks << "\n\n\n";
         break;
     case 10:
+        cout << "\n( ͡❛ ͜ʖ ͡❛)\n";
+        cout << "Bye Dude!\n\n";
         exit(0);
 
     default:
