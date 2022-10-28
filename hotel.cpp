@@ -12,43 +12,43 @@ void rooms(int Qrooms, int Srooms, int Total_rooms)
     {
         Srooms = Srooms + quant;
         Total_rooms = Total_rooms + quant * 1200;
-        cout << "\n\t" << quant << "\room / rooms is booked for you.";
+        cout << "\n\t" << quant << " room / rooms is booked for you.\n\n";
     }
 
     else
-        cout << "\n\n\tOnly " << Qrooms - Srooms << "are available in out Hotel.";
+        cout << "\n\n\tOnly " << Qrooms - Srooms << "are available in out Hotel.\n\n";
 }
 
 void bread(int Qbread, int Sbread, int Total_bread)
 {
     int quant;
-    cout << "How many breads you want : ";
+    cout << "\nHow many breads you want : ";
     cin >> quant;
 
     if (Qbread - Sbread >= quant)
     {
         Sbread = Sbread + quant;
         Total_bread = Total_bread + quant * 250;
-        cout << "\n\t" << quant << "Bread / breads is in cartlist.";
-        cout << "Your bread price is : " << Total_bread;
+        cout << "\n\t" << quant << "Bread / breads is in cartlist.\n";
+        cout << "\tYour bread price is : " << Total_bread << "\n\n";
     }
 
     else
-        cout << "\n\n\tOnly " << Qbread - Sbread << " are available in your stock.";
+        cout << "\n\n\tOnly " << Qbread - Sbread << " are available in your stock.\n\n";
 }
 
 void pasta(int Qpasta, int Spasta, int Total_pasta)
 {
     int quant;
-    cout << "How many pasta you want : ";
+    cout << "\nHow many pasta you want : ";
     cin >> quant;
 
     if (Qpasta - Spasta >= quant)
     {
         Spasta = Spasta + quant;
-        Total_pasta = Total_pasta + quant * 450;
-        cout << "\n\t" << quant << "Pasta in cartlist.";
-        cout << "Your Pasta price is : " << Total_pasta;
+        Total_pasta = Total_pasta + quant * 250;
+        cout << "\n\t" << quant << " Pasta in cartlist.\n";
+        cout << "\tYour Pasta price is : " << Total_pasta << "\n\n";
     }
 
     else
@@ -58,19 +58,19 @@ void pasta(int Qpasta, int Spasta, int Total_pasta)
 void burger(int Qburger, int Sburger, int Total_burger)
 {
     int quant;
-    cout << "How many pasta you want : ";
+    cout << "\nHow many pasta you want : ";
     cin >> quant;
 
     if (Qburger - Sburger >= quant)
     {
         Sburger = Sburger + quant;
         Total_burger = Total_burger + quant * 450;
-        cout << "\n\t" << quant << "burger in cartlist.";
-        cout << "Your burger price is : " << Total_burger;
+        cout << "\n\t" << quant << "burger in cartlist.\n";
+        cout << "\tYour burger price is : " << Total_burger << "\n";
     }
 
     else
-        cout << "\n\n\tOnly " << Qburger - Sburger << " are available in your stock.";
+        cout << "\n\n\tOnly " << Qburger - Sburger << " are available in your stock.\n\n";
 }
 
 int main()
