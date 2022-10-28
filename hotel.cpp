@@ -1,6 +1,24 @@
 #include <iostream>
 using namespace std;
 
+void rooms(int Qrooms, int Srooms, int Total_rooms)
+{
+    int quant;
+
+    cout << "How many rooms you want : ";
+    cin >> quant;
+
+    if (Qrooms - Srooms >= quant)
+    {
+        Srooms = Srooms + quant;
+        Total_rooms = Total_rooms + quant * 1200;
+        cout << "\n\t" << quant << "\room / rooms is booked for you.";
+    }
+
+    else
+        cout << "\n\n\tOnly " << Qrooms - Srooms << "are available in out Hotel.";
+}
+
 int main()
 {
     int choice, quant;
@@ -18,23 +36,45 @@ int main()
     cout << "\n\t=================================================\n";
 
     // product quantity insert
-    cout << "\n 1. Rooms : ";
+    cout << "\nRooms : ";
     cin >> Qrooms;
-    cout << "\n 2. Bread : ";
+    cout << "\tBread : ";
     cin >> Qbread;
-    cout << "Pasta : ";
+    cout << "\t\tPasta : ";
     cin >> Qpasta;
-    cout << "Burger : ";
+    cout << "\t\t\tBurger : ";
     cin >> Qburger;
-    cout << "Noodles : ";
+    cout << "\t\t\t\tNoodles : ";
     cin >> Qnoodles;
-    cout << "Shake : ";
+    cout << "\t\t\t\t\tShake : ";
     cin >> Qshake;
-    cout << "juice : ";
+    cout << "\t\t\t\t\t\tjuice : ";
     cin >> Qjuice;
-    cout << "Drinks : ";
+    cout << "\t\t\t\t\t\t\tDrinks : ";
     cin >> Qjuice;
 
     // option printing
-    cout << "Select a option from the form : ";
+    cout << "\n\nSelect a option from the form : \n";
+    cout << "\t1. Rooms\n";
+    cout << "\t2. Bread\n";
+    cout << "\t3. Pasta\n";
+    cout << "\t4. Burger\n";
+    cout << "\t5. Noodles\n";
+    cout << "\t6. Shake\n";
+    cout << "\t7. Juice\n";
+    cout << "\t8. Drinks\n\n";
+
+    // work with user options
+    cout << "Enter option number : ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        rooms(Qrooms, Srooms, Total_rooms);
+        break;
+
+    default:
+        break;
+    }
 }
